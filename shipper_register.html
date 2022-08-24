@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/vander/vender_register.css">
+    <link rel="stylesheet" href="./assets/css/vander/shipper_register.css">
 </head>
 <body>
   <header id="header">
@@ -16,17 +16,53 @@
     </ul>
   </header>
 
-    <div id="vender_register">
-        <h2>Vender Register</h2>
+    <div id="shipper_register">
+        <h2>Shipper Register</h2>
     
         <input type="text" placeholder="Username">
 
         <input type="text" placeholder="Password">
 
-        <input type="text" placeholder="Business Name">
+        <div class="dropdown">
+          <div class="select">
+            <span class="selected">Select your preferred distribution hub</span>
+            <div class="caret"></div>
+          </div>
+          <ul class="menu">
+            <li>Hub 1 - 1st Street 1, District 1</li>
+            <li>Hub 2 - 2nd Street 2, District 2</li>
+            <li>Hub 3 - 3rd Street 3, District 3</li>
+          </ul>
+        </div>
 
-        <input type="text" placeholder="Business Address">
-    
+        <script>
+          const dropdowns = document.querySelectorAll('.dropdown');
+          dropdowns.forEach(dropdown => {
+            const select = dropdown.querySelector('.select');
+            const caret = dropdown.querySelector('.caret');
+            const menu = dropdown.querySelector('.menu');
+            const options = dropdown.querySelectorAll('.menu li');
+            const selected = dropdown.querySelector('.selected');
+
+            select.addEventListener('click', () => {
+              select.classList.toggle('select-clicked');
+              menu.classList.toggle('menu-open');
+            });
+
+            options.forEach(option => {
+              option.addEventListener('click', () => {
+                selected.innerText = option.innerText;
+                select.classList.remove('select-clicked');
+                menu.classList.remove('menu-open');
+                options.forEach(option => {
+                  option.classList.remove('active1');
+                });
+                option.classList.add('active1');
+              });
+            });
+          });
+        </script>
+
         <div class="container">
             <div class="wrapper">
                <div class="image">
@@ -82,14 +118,14 @@
             });
          </script>
 
-        <button class="vender_register--register-btn">REGISTER</button>
+        <button class="shipper_register--register-btn">REGISTER</button>
 
         <p>OR</p>
 
-        <div class="vender_register-form">
-            <a class="vender_register--forgot-btn">Forgot Password</a>
+        <div class="shipper_register-form">
+            <a class="shipper_register--forgot-btn">Forgot Password</a>
             
-            <a href="./vender_login.html" class="vender_register--login-btn">Log In</a>
+            <a href="./shipper_login.html" class="shipper_register--login-btn">Log In</a>
         </div>
     </div>
 
