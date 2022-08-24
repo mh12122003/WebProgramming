@@ -130,13 +130,13 @@ body {
 
 .select {
   background: #fff;
-  width: 627px;
+  width: 100%;
   color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: 2px #fff solid;
-  padding: 1.2em 1em 1.2em 1.7em;
+  padding: 1.2em 1em 1.2em 1.8em;
   cursor: pointer;
   transition: background 0.5s;
 }
@@ -430,6 +430,20 @@ body {
 /*======================================================================*/
 
 @media only screen and (max-width: 767px) {
+  .select {
+    padding: 5px 10px;
+    width: 100%;
+  }
+
+  .selected {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .menu {
+    top: 5em;
+  }
+
   #shipper_register {
       padding: 15px 10px;
       padding-top: 0;
