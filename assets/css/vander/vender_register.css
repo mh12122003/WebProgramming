@@ -31,17 +31,23 @@ body {
   align-items: center;
   background-color: #fff;
   border-bottom: 1px #ccc solid;
-  height: max-content;
+  height: 60px;
   box-shadow: 0px 0 1px 0 #333;
   position: fixed;
   z-index: 100;
+}
+
+
+#header img {
+  width: 10%;
+  max-width: 110px;
 }
 
 #header ul {
   list-style: none;
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin: 0 40px;
   height: fit-content;
   padding: 20px 0;
@@ -63,6 +69,10 @@ body {
   color: #3a62ff;
   font-weight: 500;
   font-size: 1.4rem;
+}
+
+#header ul li a + a {
+  margin-left: 25px;
 }
 
 #vender_register {
@@ -431,4 +441,60 @@ body {
 }
 
 @media only screen and (min-width: 1023px) {
+}
+
+
+#set {
+    display:flex ;
+    align-self: flex-end;
+    position:relative;
+    margin-top: 5px;
+}
+
+#count {
+   display: inline-flex;
+   position:relative ;
+   color:#000; 
+   font-size:18px;
+   
+}
+
+#see {
+    display:inline-block;
+    color:gray;
+    margin:auto; 
+    float: right;
+    margin-right:40px;
+    margin-top:10px;
+    cursor:pointer; 
+    transition-duration:0.2s;
+}
+
+i {
+    font-size:23px;
+    transition-duration:600ms;    
+}
+
+#check0,#check1,#check2,#check3,#check4,#check5,#check6 {
+   display:block;
+   position:relative;
+   color: red;
+   width:90%;
+   background-color: #becbff2e;
+   border-radius: 2px;
+   padding: 10px;
+}
+
+#check0 span,#check1 span,#check2 span,#check3 span,#check4 span,
+#check5 span,#check6 span{
+  font-size: 1rem;
+  margin: 4px 0;
+}
+
+#check0 {
+  margin-top: 10px;
+}
+
+#check6 {
+  margin-bottom: 10px;
 }

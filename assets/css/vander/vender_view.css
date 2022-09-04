@@ -37,6 +37,12 @@ body {
     z-index: 100;
 }
 
+
+#header img {
+    width: 10%;
+    max-width: 110px;
+}
+
 #header ul {
     list-style: none;
     display: flex;
